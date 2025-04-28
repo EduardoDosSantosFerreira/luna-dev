@@ -92,3 +92,76 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Animações locais usando @keyframes */
+
+/* Logo - Animação de fade-in e crescimento */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Headline - Animação de deslizamento para cima */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Subheadline - Animação de deslizamento suave */
+@keyframes slideUpSmall {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Logo */
+.animate__logo {
+  animation: fadeInScale 1.5s ease-out;
+}
+
+/* Headline */
+.animate__headline {
+  animation: slideUp 1s ease-out;
+}
+
+/* Subheadline */
+.animate__subheadline {
+  animation: slideUpSmall 1.2s ease-out;
+}
+
+/* Botões */
+.animate__buttons {
+  animation: slideUp 1.5s ease-out;
+}
+
+/* Scroll Icon - Animação de bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate__bounce {
+  animation: bounce 1.5s infinite ease-in-out;
+}

@@ -11,36 +11,56 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative bg-[#0f172a] text-white py-20 md:py-32">
-        <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-          <div className="mb-8 w-32 h-32 md:w-40 md:h-40 relative">
-            <Image
-              src="/images/luna-logo.png"
-              alt="Luna Web Agency Logo"
-              width={160}
-              height={160}
-              className="animate-pulse"
-            />
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Transforming Ideas Into <span className="text-[#60a5fa]">Digital Reality</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mb-8">
-            We design and develop custom websites that help businesses grow, engage customers, and increase revenue.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-[#60a5fa] hover:bg-[#3b82f6] text-white">
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              View Our Work
-            </Button>
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 flex justify-center">
-            <ChevronDown className="h-10 w-10 text-[#60a5fa] animate-bounce" />
-          </div>
-        </div>
-      </section>
+      
+      <section className="relative bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white py-24 md:py-36 overflow-hidden">
+  <div className="container mx-auto px-6 flex flex-col items-center text-center">
+    {/* Logo */}
+    <div className="mb-10 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-lg bg-white/10 backdrop-blur-md flex items-center justify-center animate__logo">
+      <Image
+        src="/images/luna-clean.png"
+        alt="Luna Web Agency Logo"
+        width={160}
+        height={160}
+      />
+    </div>
+
+    {/* Headline */}
+    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate__headline">
+      Transforming Ideas Into <br />
+      <span className="bg-gradient-to-r from-[#60a5fa] to-[#3b82f6] bg-clip-text text-transparent">
+        Digital Reality
+      </span>
+    </h1>
+
+    {/* Subheadline */}
+    <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10 animate__subheadline">
+      We design and develop custom websites that help businesses grow, engage customers, and increase revenue.
+    </p>
+
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row gap-4 animate__buttons">
+      <Button
+        size="lg"
+        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300"
+      >
+        Get Started <ArrowRight className="ml-2 h-5 w-5" />
+      </Button>
+      <Button
+        size="lg"
+        variant="outline"
+        className="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+      >
+        View Our Work
+      </Button>
+    </div>
+
+    {/* Scroll Down Icon */}
+    <div className="absolute bottom-6 left-0 right-0 flex justify-center animate__bounce">
+      <ChevronDown className="h-8 w-8 text-[#60a5fa]" />
+    </div>
+  </div>
+</section>
+
 
       {/* Services Section */}
       <section className="py-20 bg-white" id="services">
@@ -273,7 +293,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/team.jpg"
+                  src="https://images.pexels.com/photos/7654129/pexels-photo-7654129.jpeg?auto=compress&cs=tinysrgb&w=600"
                   alt="Luna Team"
                   width={600}
                   height={600}
@@ -299,25 +319,25 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             <TestimonialCard
               name="Sarah Johnson"
               company="Eco Store"
-              image="/images/testimonial-1.jpg"
+              image="https://images.pexels.com/photos/3867382/pexels-photo-3867382.jpeg?auto=compress&cs=tinysrgb&w=600"
               quote="Luna transformed our online presence completely. Our e-commerce sales have increased by 200% since launching our new website."
               rating={5}
             />
             <TestimonialCard
               name="Michael Chen"
               company="Financial Advisors Inc."
-              image="/images/testimonial-2.jpg"
+              image="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600"
               quote="The team at Luna understood our vision perfectly. They delivered a professional website that has helped us attract high-value clients."
               rating={5}
             />
             <TestimonialCard
               name="Emily Rodriguez"
               company="Photography Studio"
-              image="/images/testimonial-3.jpg"
+              image="https://images.pexels.com/photos/3769149/pexels-photo-3769149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               quote="As a creative professional, I needed a portfolio that would showcase my work beautifully. Luna exceeded my expectations."
               rating={5}
             />
