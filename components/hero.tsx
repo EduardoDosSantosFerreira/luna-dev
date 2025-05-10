@@ -34,7 +34,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      <div className="container mx-auto px-4 overflow-hidden">
+      <div className="container mx-auto px-4 overflow-hidden ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 z-10">
             <motion.div
@@ -88,7 +88,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-wrap items-center gap-4 pt-6"
+              className="flex flex-wrap items-center gap-4 pt-10"
             >
               <div className="flex items-center">
                 <div className="bg-secondary/20 p-2 rounded-full mr-3">
@@ -144,9 +144,22 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-8 h-12 rounded-full border-2 border-white/30 flex justify-center items-start p-1">
-          <div className="w-1 h-2 bg-white/60 rounded-full"></div>
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-10 h-10 flex justify-center items-center">
+          <svg 
+            className="w-6 h-6 text-white/60" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M19 14l-7 7m0 0l-7-7m7 7V3" 
+            />
+          </svg>
         </div>
       </div>
     </section>
