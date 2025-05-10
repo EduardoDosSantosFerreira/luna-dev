@@ -145,7 +145,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-10 h-10 flex justify-center items-center">
+        <div className="w-8 h-12 flex justify-center items-center">
           <svg 
             className="w-6 h-6 text-white/60" 
             fill="none" 
