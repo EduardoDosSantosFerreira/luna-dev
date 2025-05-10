@@ -72,15 +72,15 @@ export default function Testimonials() {
             <Quote className="h-16 w-16 text-secondary/20" />
           </div>
 
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden min-h-[300px]">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-primary-dark/50 backdrop-blur-sm border border-secondary/10 rounded-lg p-8 md:p-10">
-                    <p className="text-lg md:text-xl text-gray-300 mb-6">"{testimonial.content}"</p>
+                  <div className="bg-primary-dark/50 backdrop-blur-sm border border-secondary/10 rounded-lg p-8 md:p-10 h-full flex flex-col">
+                    <p className="text-lg md:text-xl text-gray-300 mb-6 flex-grow">{testimonial.content}</p>
 
                     <div className="flex items-center">
                       <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">

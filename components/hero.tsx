@@ -105,13 +105,13 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative w-full max-w-full"
           >
-            {/* <div className="relative z-10 bg-gradient-to-br from-primary-dark to-secondary/30 rounded-lg p-1">
+             <div className="relative z-10 bg-gradient-to-br from-primary-dark to-secondary/30 rounded-lg p-1">
               <div className="bg-primary-dark rounded-lg overflow-hidden">
                 <div className="flex items-center bg-primary-dark/80 px-4 py-2 space-x-2">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -139,8 +139,8 @@ export default function Hero() {
             </div>
 
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-secondary/30 rounded-full filter blur-xl"></div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/20 rounded-full filter blur-xl"></div> */}
-          </motion.div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/20 rounded-full filter blur-xl"></div> 
+          </motion.div> */}
         </div>
       </div>
 

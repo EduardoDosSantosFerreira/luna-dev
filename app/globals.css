@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --primary: #121a2a;
-  --primary-dark: #0a1018;
+  --primary: #0f0f10;
+  --primary-dark: #080809;
   --secondary: #4e89ca;
 }
 
@@ -69,4 +69,34 @@ svg,
 video {
   max-width: 100%;
   height: auto;
+}
+
+/* Prevenir scrollbars indesejados */
+* {
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* Permitir overflow apenas quando necessário */
+.overflow-auto {
+  overflow: auto;
+  scrollbar-width: auto;
+}
+
+.overflow-auto::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  height: 8px;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+  background-color: rgba(78, 137, 202, 0.3);
+  border-radius: 4px;
+}
+
+.overflow-auto::-webkit-scrollbar-track {
+  background-color: rgba(15, 15, 16, 0.1);
 }

@@ -36,11 +36,11 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group"
+              className="group h-full"
               onMouseEnter={() => setActiveIndex(index)}
             >
-              <div className="relative overflow-hidden rounded-lg bg-primary-dark/50 border border-secondary/10 group-hover:border-secondary/30 transition-all duration-300">
-                <div className="relative h-64">
+              <div className="relative overflow-hidden rounded-lg bg-primary-dark/50 border border-secondary/10 group-hover:border-secondary/30 transition-all duration-300 h-full flex flex-col">
+                <div className="relative min-h-[16rem] w-full">
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}

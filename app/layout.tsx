@@ -27,7 +27,7 @@ export default function RootLayout({
         <link rel="icon" href="/luna-clean.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
-      <body className={`${inter.className} bg-primary text-white relative overflow-x-hidden`}>
+      <body className={`${inter.className} bg-[#0f0f10] text-white relative overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <StarBackground />
           <Navbar />
