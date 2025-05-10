@@ -1,33 +1,40 @@
-import type { Metadata } from 'next';
-import { ReactNode } from 'react';
-import './globals.css';
-import { Poppins } from 'next/font/google'; // IMPORTA A FONTE
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
+import { ThemeProvider } from "@/components/theme-provider"
+import StarBackground from "@/components/star-background"
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], // você pode ajustar os pesos conforme usar
-});
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'LunaDev',
-  description: 'Created with v0',
-  generator: 'v0.dev',
-};
-
-interface RootLayoutProps {
-  children: ReactNode;
+  title: "Luna.dev | Desenvolvimento de Websites Inovadores",
+  description:
+    "Agência especializada em desenvolvimento de websites modernos e inovadores. Transforme sua presença digital com Luna.dev.",
+    generator: 'v0.dev'
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
-        {/* Favicon padrão */}
-        <link rel="icon" href="/images/luna-clean2.ico" type="image/x-icon" />
+        <link rel="icon" href="/luna-clean.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
-      <body className={poppins.className}> {/* APLICA AQUI */}
-        {children}
+      <body className={`${inter.className} bg-primary text-white relative overflow-x-hidden`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <StarBackground />
+          <Navbar />
+          <main className="min-h-screen overflow-x-hidden">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

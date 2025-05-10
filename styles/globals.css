@@ -2,19 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fonte padrão para o body */
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Utilitários extras */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
-/* Base - variáveis e resets */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -51,7 +48,6 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -86,11 +82,12 @@ body {
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+}
 
+@layer base {
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
